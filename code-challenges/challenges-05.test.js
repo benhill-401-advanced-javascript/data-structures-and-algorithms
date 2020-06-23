@@ -38,6 +38,7 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
+  
 }
 
 /* ------------------------------------------------------------------------------------------------
