@@ -24,7 +24,9 @@ let $ = createSnippetWithJQuery(`
 
 const generateSubmitButton = () => {
   // Solution code here...
-}
+  let $button = $(`<button>submit</button>`);
+  $('section').append($button);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -40,6 +42,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  let regex = /[0-9]/g;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +56,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let regex = /[A-Z][a-zA-Z]*\b/g;
+  if (!str.match(regex)) {
+    return [];
+  } else {
+    return str.match(regex);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,6 +72,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let newArray = [];
+  let regex = /^[A-J]/;
+  arr.forEach(element => {
+    if (regex.test(element)) {
+      newArray.push(element);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,7 +154,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-04.solution.test.js
 
 ------------------------------------------------------------------------------------------------ */
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should add a submit button to the DOM', () => {
     generateSubmitButton();
     expect($('button').text()).toStrictEqual('submit');
@@ -157,7 +175,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
@@ -170,7 +188,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
   test('It should return the cities whose names begin with the letters A through J', () => {
