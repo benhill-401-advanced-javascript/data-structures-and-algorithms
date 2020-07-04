@@ -38,6 +38,7 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
+
   starWarsPeople.forEach(function (person) {
     let $clone = $('#template').clone();
     $('main').append($clone);
@@ -48,6 +49,7 @@ const templateWithJQuery = () => {
   });
   console.log($('main').html());
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
