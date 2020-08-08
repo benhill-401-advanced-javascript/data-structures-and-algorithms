@@ -65,8 +65,8 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
   // Solution code here...
+  let result = [];
   for (var i = 0; i <= str.length; i++) {
     result.push(str.slice(i));
   }
@@ -130,8 +130,8 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
   // Solution code here...
+  let result = [];
   recipe.ingredients.forEach(value => {
     let str1 = value.slice(value.indexOf('') + 1);
     let str2 = str1.slice(str1.indexOf('') + 1);
@@ -361,6 +361,6 @@ xdescribe('Testing challenge 11', () => {
 });
 
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 };
