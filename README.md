@@ -2,8 +2,9 @@
 
 ## Table of Contents
 
-1. [Code Challenges](code-challenges)
+1. [Code Challenges 301](code-challenges)
 1. [Full Stack JavaScript](javascript)
+1. [Array reverse code challenge](code-challenges/arrayReverse)
 
 ## Create a copy of this repository
 
