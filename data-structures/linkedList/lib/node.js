@@ -9,6 +9,5 @@ class Node {
   }
 }
 // Each node will contain a value and next property
-// The value of each node will be 
 
 module.exports = Node;

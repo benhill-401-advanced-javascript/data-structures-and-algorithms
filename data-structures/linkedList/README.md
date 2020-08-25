@@ -16,6 +16,8 @@ Using a linear (sequential linked list) where each node contains only one pointe
 
 ## Approach and Efficiency
 
+Pair programmed with Sarah, Joe, Chris, and Diane.
+
 ## API
 
 No API used
