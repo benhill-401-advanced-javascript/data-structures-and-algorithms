@@ -1,3 +1,5 @@
+# Code Challenge 5
+
 # Singly Linked List
 
 Using a linear (sequential linked list) where each node contains only one pointer to the next node, we will provide value to each node starting at the head. The value will contain a number and the next property will contain the next node. The tail node will have a NULL as it's value and next.
@@ -21,3 +23,13 @@ Pair programmed with Sarah, Joe, Chris, and Diane.
 ## API
 
 No API used
+
+# Code Challenge 6
+
+## Challenge
+
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+Mob Programmed with Sarah, Joe, Davee, Edgar, and Diane
