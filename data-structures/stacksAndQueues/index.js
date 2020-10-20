@@ -1,9 +1,14 @@
 'use strict';
 
-const StackAndQueue = require('./model/stacks_and_queues.js');
-const stack = new StackAndQueue();
+const Stack = require('./model/stack.js');
+const Queue = require('./model/queue.js');
+const stack = new Stack();
+const queue = new Queue();
 
-// stack = [];
+console.log(queue, 'value of queue');
+
+queue.enqueue('FOOTBALL');
+
 
 //push
 stack.push('SEA');
@@ -20,7 +25,3 @@ stack.pop();
 stack.peek();
 console.log(stack, 'peek sees nodes that are there, pop removed one');
 
-const queue = new StackAndQueue();
-console.log(queue, 'value of queue');
-
-queue.enqueue('FOOTBALL');

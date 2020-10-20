@@ -1,5 +1,7 @@
 'use strict';
 
+// const node = require('./node.js');
+
 class Stack {
   constructor() {
     this.storage = {};
@@ -20,25 +22,3 @@ class Stack {
   }
 }
 module.exports = Stack;
-
-
-class Queue {
-  constructor() {
-    this.storage = {};
-    this.head = 0;
-    this.tail = 0;
-  }
-  enqueue(value) {
-    this.storage[this.tail] = value;
-    this.tail++;
-  }
-  dequeue() {
-    let removed = this.storage[this.head];
-    delete this.storage[this.head];
-    this.head++;
-    return removed;
-  }
-}
-
-module.export = Queue;
-
