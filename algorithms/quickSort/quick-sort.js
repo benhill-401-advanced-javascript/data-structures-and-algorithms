@@ -1,15 +1,15 @@
 'use strict';
 
-const numbers = [8, 4, 23, 42, 16, 15];
+const numbers = [8, 4, 23, 42, 16, 15, 23, 5432, 21, 653];
+
+
 
 function quickSort(array, left, right) {
   const length = array.length;
-  let pivot;
-  let partitionIndexes;
 
   if (left < right) {
-    pivot = right;
-    partitionIndexes = partition(array, pivot, left, right);
+    let pivot = right;
+    let partitionIndexes = partition(array, pivot, left, right);
 
     quickSort(array, left, partitionIndexes - 1);
     quickSort(array, partitionIndexes + 1, right);
