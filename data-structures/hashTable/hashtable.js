@@ -1,63 +1,5 @@
 'use strict';
 
-
-// class HashTable {
-//   constructor(size) {
-//     this.data = new Array(size);
-//   }
-//   hash(key) {
-//     let hash = 0;
-//     for (let i = 0; i < key.length; i++) {
-//       hash = (hash + key.charCodeAt(i) * i) % this.data.length;
-//     }
-//     return hash;
-//   }
-//   add(key, value) {
-//     let result = this.hash(key);
-//     if (!this.data[result]) {
-//       this.data[result] = [];
-//       console.log(this.data);
-//     }
-//     this.data[result].push([key, value]);
-//   }// O(1)
-//   contains(key) {
-//     let result = this.hash(key);
-//     const currentBucket = this.data[result];
-//     console.log(currentBucket);
-//     if (currentBucket.length) {
-//       for (let i = 0; i < currentBucket.length; i++) {
-//         if (currentBucket[i][0] === key) {
-//           return currentBucket[i][1];
-//         }
-//       }
-//     }
-//     return undefined;
-//   }// O(1)
-//   keys() {
-//     // allows us to iterate through our hash table
-//     const keysArray = [];
-//     for (let i = 0; i < this.data.length; i++) {
-//       if (this.data[i]) {
-//         console.log(this.data[i][0][0]);
-//         keysArray.push(this.data[i][0]);
-//       }
-//     }
-//     return keysArray;
-//   }
-// }
-
-// const myHashTable = new HashTable(500);
-// myHashTable.add('random wizard', 1000);
-// myHashTable.add('random witch', 11);
-// myHashTable.add('random beast', 234);
-
-// myHashTable.contains('random wizard', 13);
-// myHashTable.contains('random witch');
-// myHashTable.contains('random beast');
-
-
-
-
 const hash = (key, size) => {
   let hashedKey = 0;
   for (let i = 0; i < key.length; i++) {
@@ -98,15 +40,17 @@ class HashTable {
 
 const hashTable = new HashTable();
 
-hashTable.add('Leonardo', 'Catchphrase: Radical!');
-hashTable.add('Donatello', 'Catchphrase: Bodacious!');
-hashTable.add('Raphael', 'Catchphrase: Totally tubular dude!');
-hashTable.add('Michelangelo', 'Catchphrase: Gnarly!');
-hashTable.add('Master Splinter', 'Catchphrase: Cowabunga!');
+hashTable.add('Leonardo', 'Radical!');
+hashTable.add('Donatello', 'Bodacious!');
+hashTable.add('Raphael', 'Totally tubular dude!');
+hashTable.add('Michelangelo', 'Gnarly!');
+hashTable.add('Master Splinter', 'Cowabunga!');
 
 // console.log(hashTable.contains('Leonardo'));
-console.log(hashTable.contains('Master Spliter'));
+console.log(hashTable.contains('Master Splinter'));
 
 // hashTable.keys();
 
 console.log(hashTable);
+
+
