@@ -49,8 +49,5 @@ hashTable.add('Master Splinter', 'Cowabunga!');
 // console.log(hashTable.contains('Leonardo'));
 console.log(hashTable.contains('Master Splinter'));
 
-// hashTable.keys();
-
 console.log(hashTable);
-
 
