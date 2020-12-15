@@ -99,3 +99,6 @@ return arr;
 ![merge sort visual](img/merge-sort.png)
 
 #### Pair programmed with Jonathon Lee
+
+- [Coded Solution](merge-sort.js)
+- [JavaScript Table of Contents](../README.md)

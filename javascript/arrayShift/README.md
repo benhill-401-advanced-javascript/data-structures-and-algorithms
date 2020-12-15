@@ -17,3 +17,7 @@ Write a function called insertShiftArray which takes in an array and the value t
 # Resources
 
 ![Switch Array Whiteboard](Whiteboard[1]-01.png)
+
+- [Coded Solution](array-shift.js)
+- [JavaScript Table of Contents](../README.md)
+

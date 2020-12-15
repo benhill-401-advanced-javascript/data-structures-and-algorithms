@@ -54,3 +54,6 @@ I'll use javascript's built in array methods.
 ## API
 
 <!-- Description of each method publicly available to your Stack and Queue-->
+
+- [Coded Solution](index.js)
+- [JavaScript Table of Contents](../README.md)

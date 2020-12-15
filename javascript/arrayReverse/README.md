@@ -17,3 +17,7 @@ Take an array and reverse it.
 # Solution
 
 ![Reverse Array](CodeChallenge1.png)
+
+- [Coded Solution](reverse.js)
+- [JavaScript Table of Contents](../README.md)
+

@@ -32,4 +32,5 @@ No API used
 .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
-Mob Programmed with Sarah, Joe, Davee, Edgar, and Diane
+- [Coded Solution](index.js)
+- [JavaScript Table of Contents](../README.md)

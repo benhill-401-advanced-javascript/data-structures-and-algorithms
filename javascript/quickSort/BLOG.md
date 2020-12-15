@@ -56,3 +56,6 @@ O(N log(N))
 Each time we partitioned the array we broke it down into 2 subarrays.
 Assuming the pivot ends up somewhere in the middle of the array, these two subarrays are of roughly equal size.
 ![halving](img/array12.jpeg)
+
+- [Coded Solution](quick-sort.js)
+- [JavaScript Table of Contents](../README.md)

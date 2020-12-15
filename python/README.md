@@ -1,6 +1,13 @@
 # Data Structures and Algorithms
 
-## Language: Python
+[Back To Main](../README.md)
+
+## Language: `Python`
+
+### Code Challenges:
+- [Array Reverse](array_reverse/README.md)
+- [Array Shift](array-shift/README.md)
+- [Array Binary Search]()
 
 ### Folder and Challenge Setup
 

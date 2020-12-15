@@ -28,3 +28,6 @@ Write tests to prove the following functionality:
 Describe approach
 Big O for space and time
 **Image of Whiteboard**
+
+- [Coded Solution](hashtable.js)
+- [JavaScript Table of Contents](../README.md)

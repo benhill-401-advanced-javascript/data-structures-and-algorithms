@@ -28,3 +28,6 @@
 ## UML
 
 **UML image pending**
+
+- [Coded Solution](index.js)
+- [JavaScript Table of Contents](../README.md)

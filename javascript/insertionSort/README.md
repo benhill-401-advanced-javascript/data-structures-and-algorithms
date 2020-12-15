@@ -1,5 +1,7 @@
 ## Insertion Sort
 
+#### Pair programmed with Chris Bortel
+
 Insertion sort is a  sorting algorithm that builds the sorted array one item(index) at a time. It is not efficient because each loop through has to compare every temp to the j
 
 temp is holding the value that is to be sorted
@@ -49,5 +51,6 @@ Nearly-sorted: it will go through all of them and then put 11 into a temp variab
 [2,3,5,7,13,11] [11]
 [2,3,5,7,11,13]
 ```
+- [Coded Solution](insertion-sort.js)
+- [JavaScript Table of Contents](../README.md)
 
-#### Pair programmed with Chris Bortel

@@ -15,3 +15,6 @@
 ## Solution
 
 <!-- Embedded whiteboard image -->
+
+- [Coded Solution](left-join.js)
+- [JavaScript Table of Contents](../README.md)
