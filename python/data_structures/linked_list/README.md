@@ -13,7 +13,7 @@ This singly linked list implementation will be a classic linked list with a head
 - Create the following methods to extend implementation:
   - [x] .append(value) which adds a new node with the given value to the end of the list
   - [x] .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-  - [ ] .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+  - [x] .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 ### Phase Three:
 - k-th value from the end of a linked list.
@@ -23,4 +23,8 @@ This singly linked list implementation will be a classic linked list with a head
 - Approach:
 - Big O:
 
-Whiteboard:
+#### Whiteboard Phase One:
+
+#### Whiteboard Phase Two:
+![phase two](img/cc_class-6.png)
+#### Whiteboard Phase Three:
