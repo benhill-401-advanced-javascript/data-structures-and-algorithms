@@ -72,3 +72,66 @@ def test_return_collection():
   actual = str(tester)
   assert actual == expected
 
+# Can successfully add a node to the end of the linked list
+def test_can_append():
+  tester = LinkedList()
+  tester.append(1)
+  tester.append(2)
+  assert tester.head.next.value == 2
+
+def test_cannot_append():
+  tester = LinkedList()
+  tester.append(1)
+  tester.append(3)
+  assert tester.head.next.value != 2
+
+# Can successfully add multiple nodes to the end of a linked list
+def test_can_append_multiple():
+  tester = LinkedList()
+  tester.insert(1)
+  tester.append(2)
+  tester.append(3)
+  expected = '{ 1 } -> { 2 } -> { 3 } -> NONE'
+  actual = str(tester)
+  assert actual == expected
+
+# Can successfully insert a node before a node located i the middle of a linked list
+def test_can_insert_before_middle():
+  tester = LinkedList()
+  tester.insert(4)
+  tester.insert(3)
+  tester.insert(2)
+  tester.insert(1)
+  tester.insert_before(3, "Middle")
+  assert tester
+
+# Can successfully insert a node before the first node of a linked list
+def test_can_insert_before_first():
+  tester = LinkedList()
+  tester.insert(4)
+  tester.insert(3)
+  tester.insert(2)
+  tester.insert(1)
+  tester.insert_before(1, "Before first")
+  assert tester
+
+# Can successfully insert after a node in the middle of the linked list
+def test_can_insert_after_middle():
+  tester = LinkedList()
+  tester.insert(4)
+  tester.insert(3)
+  tester.insert(2)
+  tester.insert(1)
+  tester.insert_after(2, "Middle")
+  assert tester
+
+# Can successfully insert a node after the last node of the linked list
+def test_can_insert_after_last():
+  tester = LinkedList()
+  tester.insert(4)
+  tester.insert(3)
+  tester.insert(2)
+  tester.insert(1)
+  tester.insert_after(4, 5)
+  assert tester
+
