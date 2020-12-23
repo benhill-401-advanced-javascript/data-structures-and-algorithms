@@ -28,3 +28,4 @@ This singly linked list implementation will be a classic linked list with a head
 #### Whiteboard Phase Two:
 ![phase two](img/cc_class-6.png)
 #### Whiteboard Phase Three:
+![phase three](img/cc7.png)

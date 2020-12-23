@@ -199,6 +199,22 @@ class LinkedList:
     current = current.next
     # return self.head
 
+  def kth_number(self, k):
+    current = self.head
+
+    counter = 0
+    while current is not None:
+      current = current.next
+      counter += 1
+
+    if k > counter:
+      print(f'{k} is not in Linked List!')
+      return
+    current = self.head
+    for i in range(0, counter - k):
+      current = current.next
+    return current.value
+
 
 if __name__ == "__main__":
   new_node = Node(1)
@@ -222,6 +238,7 @@ if __name__ == "__main__":
   print(link_list)
   link_list.insert_after(5, 88)
   print(link_list)
+  print(link_list.kth_number(4))
   # print(link_list.includes(3))
   # print(link_list.includes(4))
   # print(new_ll1)
