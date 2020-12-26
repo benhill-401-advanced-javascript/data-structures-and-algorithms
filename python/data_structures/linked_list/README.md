@@ -1,5 +1,7 @@
 # Singly Linked List
 This singly linked list implementation will be a classic linked list with a head node that traverses through each node until it reaches the tail node. It will be implemented in three phases
+- [Click here for code implementation](linked_list.py)
+- [Click here for tests](../../tests/test_linked_list.py)
 
 ### Phase One:
 - [x] Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -17,7 +19,7 @@ This singly linked list implementation will be a classic linked list with a head
 
 ### Phase Three:
 - k-th value from the end of a linked list.
-  - [ ] Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+  - [x] Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Approach & Efficiency
 - Approach:

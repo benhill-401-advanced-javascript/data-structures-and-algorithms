@@ -5,9 +5,12 @@
 ## Language: `Python`
 
 ### Code Challenges:
-- [Array Reverse](array_reverse/README.md)
-- [Array Shift](array-shift/README.md)
-- [Array Binary Search](array_binary_search/README.md)
+- **Algorithms**
+  - [Array Reverse](array_reverse/README.md)
+  - [Array Shift](array-shift/README.md)
+  - [Array Binary Search](array_binary_search/README.md)
+- **Data Structures**
+  - [Linked List](data_structures/linked_list/README.md)
 
 ### Folder and Challenge Setup
 
