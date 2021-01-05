@@ -1,6 +1,3 @@
-# import data_structures.linked_list.linked_list
-
-# from data_structures.linked_list.linked_list import Node, LinkedList
 from data_structures.linked_list.linked_list import Node, LinkedList
 
 
@@ -30,20 +27,26 @@ def merge_lists(ll_1, ll_2):
 
 
 if __name__ == "__main__":
-    list1 = [1, 3, 4]
+    ll_1 = LinkedList()
+    ll_2 = LinkedList()
 
-    list2 = [
-      [5,9,4], 
-      [5, 9]
-    ]
+    list1 = [[1], [3], [5], [7]]
+    list2 = [[2], [4], [6], [8]]
 
-    link_list_1 = LinkedList()
-    link_list_2 = LinkedList()
 
-    link_list_1.insert(list1)
+    ll_1.insert(list1[3])
+    ll_1.insert(list1[2])
+    ll_1.insert(list1[1])
+    ll_1.insert(list1[0])
 
-    link_list_2.insert(list2[1])
+    ll_2.insert(list2[3])
+    ll_2.insert(list2[2])
+    ll_2.insert(list2[1])
+    ll_2.insert(list2[0])
 
-    merge = merge_lists(link_list_1, link_list_2)
+    print(ll_1)
+    print(ll_2)
+    
+    merge = merge_lists(ll_1, ll_2)
     print(merge)
 
