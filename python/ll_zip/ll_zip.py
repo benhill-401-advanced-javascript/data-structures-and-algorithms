@@ -44,9 +44,9 @@ if __name__ == "__main__":
     ll_2.insert(list2[1])
     ll_2.insert(list2[0])
 
-    print(ll_1)
-    print(ll_2)
+    print('First List:', ll_1)
+    print('Second List:', ll_2)
     
     merge = merge_lists(ll_1, ll_2)
-    print(merge)
+    print('Magic happens, aaaaand:', merge)
 
