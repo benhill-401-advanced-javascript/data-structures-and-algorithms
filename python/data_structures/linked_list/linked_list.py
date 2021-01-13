@@ -95,7 +95,7 @@ class LinkedList:
 
 # if __name__ == "__main__":
 #   new_node = Node(1)
-#   new_ll = LinkedList()
+  # new_ll = LinkedList()
 #   print(new_ll)
 
 #   link_list = LinkedList(new_node)
