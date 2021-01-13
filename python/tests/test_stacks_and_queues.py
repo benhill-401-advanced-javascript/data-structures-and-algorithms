@@ -2,13 +2,10 @@ from data_structures.stacks_and_queues.stacks_and_queues import Stack, Queue, In
 
 import pytest
 
+# Can successfully instantiate an empty stack
 def test_instantiate_stack():
-  tester = Stack()
-  assert tester.top == None
-
-def test_instantiate_queue():
-  tester = Queue()
-  assert tester.front == None
+  stack = Stack()
+  assert stack.top == None
 
 # Can successfully push onto a stack
 def test_push_onto_stack():
@@ -76,17 +73,32 @@ def test_peek():
   expected = 1
   assert actual == expected
 
-# Can successfully instantiate an empty stack
-def test_raise_exception_if_empty():
+def test_raise_exception_when_peeking():
   stack = Stack()
   with pytest.raises(InvalidOperationError) as e:
     stack.peek()
 
-  assert str(e.value) == "Stack is empty!"
+  assert str(e.value) == "Peeking from an empty stack!"
 
 # Calling pop or peek on empty stack raises exception
+def test_raise_exception_when_popping():
+  stack = Stack()
+  with pytest.raises(InvalidOperationError) as e:
+    stack.pop()
+
+  assert str(e.value) == "Popping from an empty stack!"
+
+def test_instantiate_queue():
+  queue = Queue()
+  assert queue.front == None
 
 # Can successfully enqueue into a queue
+def test_enqueue_into_queue():
+  queue = Queue()
+  queue.enqueue(1)
+  actual = queue.front.value
+  expected = 1
+  assert actual == expected
 
 # Can successfully enqueue multiple values into a queue
 

@@ -1,4 +1,5 @@
 class InvalidOperationError(BaseException):
+
   pass
 
 class Node:
@@ -19,7 +20,8 @@ class Stack:
     return output + 'NONE'
 
   def is_empty(self):
-    return True
+    if self.top == None:
+      return True
   
   def push(self, value):
     node = Node(value)
@@ -27,15 +29,15 @@ class Stack:
     self.top = node
 
   def pop(self):
-    # if self.is_empty():
-    #   raise InvalidOperationError("Stack is empty!")
+    if self.is_empty():
+      raise InvalidOperationError("Popping from an empty stack!")
     node = self.top
     self.top = self.top.next
     return node.value
 
   def peek(self):
-    # if self.is_empty():
-    #   raise InvalidOperationError("Stack is empty!")
+    if self.is_empty():
+      raise InvalidOperationError("Peeking from an empty stack!")
     return self.top.value
 
 
