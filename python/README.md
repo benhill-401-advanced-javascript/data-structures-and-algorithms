@@ -10,9 +10,11 @@
   - [Array Shift](array-shift/README.md)
   - [Array Binary Search](array_binary_search/README.md)
 
+
 - **Data Structures**
   - [Linked List](data_structures/linked_list/README.md)
   - [LL zip](ll_zip/README.md)
+  - [Animal Shelter Queue](fifo_animal_shelter/README.md)
 
 ### Folder and Challenge Setup
 
