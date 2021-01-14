@@ -1,6 +1,6 @@
-[Click here](queue_with_stacks.py) for code implementation.
-[Click here](../tests/test_queue_with_stacks.py) for unit tests.
-[Back to Table of Contents](../README.md)
+- [Click here](queue_with_stacks.py) for code implementation.
+- [Click here](../tests/test_queue_with_stacks.py) for unit tests.
+- [Back to Table of Contents](../README.md)
 
 # Challenge Summary
 - Implement a Queue using two Stacks
