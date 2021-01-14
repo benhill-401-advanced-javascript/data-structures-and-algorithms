@@ -1,7 +1,7 @@
 # Stacks and Queues
 - [Click here](./stacks_and_queues.py) for code implementation.
 - [Click here](../../tests/test_stacks_and_queues.py) for unit tests
-- [Back to Table of Contents](../README.md)
+- [Back to Table of Contents](../../README.md)
 
 ## Challenge
 - Create a **Node class** that has properties for the value stored in the Node, and a pointer to the next node.

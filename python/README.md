@@ -13,6 +13,8 @@
 - **Data Structures**
   - [Linked List](data_structures/linked_list/README.md)
   - [LL zip](ll_zip/README.md)
+  - [Stacks and Queues](data_structures/stacks_and_queues/README.md)
+  - [Pseudo Queue](queue_with_stacks/README.md)
 
 ### Folder and Challenge Setup
 
