@@ -1,5 +1,4 @@
 class InvalidOperationError(BaseException):
-
   pass
 
 class Node:
@@ -40,38 +39,81 @@ class Stack:
       raise InvalidOperationError("Peeking from an empty stack!")
     return self.top.value
 
-
 class Queue:
-  def __init__(self):
-    self.front = None
-    self.rear = None
+  def __init__(self, front=None, rear=None):
+    self.front = front
+    self.rear = rear
+  
+  def __str__(self):
+    output = ''
+    current = self.front
+    while current:
+      output += f'{{ {current.value} }} -> '
+      current = current.next
+    return output + 'NONE'
 
-  def enqueue(self):
-    pass
+  def enqueue(self, value):
+    node = Node(value)
+    if self.is_empty():
+      self.front = node 
+      self.rear = node
+    else:
+      self.rear.next = node
+      self.rear = node
 
   def dequeue(self):
-    pass
+    if self.is_empty():
+      raise InvalidOperationError("Cannot dequeue from empty queue!")
+    node = self.front
+    self.front = self.front.next
+    return node.value
 
   def peek(self):
-    pass
+    if self.is_empty():
+      raise InvalidOperationError("Peeking from an empty queue!")
+    return self.front.value
 
   def is_empty(self):
-    pass
+    if self.front == None:
+      return True
+    else:
+      return False
+
+  def peek(self):
+    if self.is_empty():
+      raise InvalidOperationError("Peeking from an empty queue!")
+    return self.front.value
+
+  def is_empty(self):
+    if self.front == None:
+      return True
 
 
 if __name__ == "__main__":
   new_node = Node(1)
-  stack = Stack()
+  # stack = Stack()
   queue = Queue()
-  print(stack)
+  # print(stack)
+  print(queue)
 
-  stack.push(2)
-  stack.push(1)
-  stack.push('TOP')
-  print(stack)
+  # stack.push(2)
+  # stack.push(1)
+  # stack.push('TOP')
+  # print(stack)
 
-  stack.pop()
-  stack.pop()
-  print(stack)
+  queue.enqueue('FRONT')
+  queue.enqueue(2)
+  queue.enqueue(1)
+  queue.enqueue('BACK')
+  print(queue)
+
+
+  # stack.pop()
+  # stack.pop()
+  # print(stack)
+  queue.dequeue()
+  print(queue)
+
+  print(queue.peek())
 
 

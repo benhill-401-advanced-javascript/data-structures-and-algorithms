@@ -88,6 +88,7 @@ def test_raise_exception_when_popping():
 
   assert str(e.value) == "Popping from an empty stack!"
 
+# Can successfully instantiate an empty queue
 def test_instantiate_queue():
   queue = Queue()
   assert queue.front == None
@@ -96,18 +97,60 @@ def test_instantiate_queue():
 def test_enqueue_into_queue():
   queue = Queue()
   queue.enqueue(1)
-  actual = queue.front.value
+  actual = queue.rear.value
   expected = 1
   assert actual == expected
 
 # Can successfully enqueue multiple values into a queue
+def test_enqueue_multiple():
+  queue = Queue()
+  queue.enqueue(3)
+  queue.enqueue(2)
+  queue.enqueue(1)
+  actual = queue.rear.value
+  expected = 1
+  assert actual == expected
+
+def test_multiple_enqueue_fails():
+  queue = Queue()
+  queue.enqueue(3)
+  queue.enqueue(2)
+  queue.enqueue(1)
+  assert queue.rear.value != 2
 
 # Can successfully dequeue out of a queue the expected value
+def test_dequeue_one():
+  queue = Queue()
+  queue.enqueue(2)
+  queue.enqueue(1)
+  actual = queue.dequeue()
+  expected = 2
+  assert actual == expected
 
 # Can successfully peek into a queue, seeing the expected value
+def test_can_peek_queue():
+  queue = Queue()
+  queue.enqueue(1)
+  queue.enqueue(2)
+  actual = queue.peek()
+  expected = 1
+  assert actual == expected
 
 # Can successfully empty a queue after multiple dequeues
-
-# Can successfully instantiate an empty queue
+def test_can_empty_queue():
+  queue = Queue()
+  queue.enqueue(1)
+  queue.enqueue(1)
+  queue.dequeue()
+  queue.dequeue()
+  actual = queue.is_empty()
+  expected = True
+  assert actual == expected
 
 # Calling dequeue or peek on empty queue raises exception
+def test_raise_exception_empty_queue():
+  queue = Queue()
+  with pytest.raises(InvalidOperationError) as e:
+    queue.peek()
+
+  assert str(e.value) == "Peeking from an empty queue!"
