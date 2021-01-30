@@ -9,6 +9,7 @@
   - [Array Reverse](array_reverse/README.md)
   - [Array Shift](array-shift/README.md)
   - [Array Binary Search](array_binary_search/README.md)
+  - [Multi-Bracket Validation](multi_bracket_validation/README.md)
 
 
 - **Data Structures**
