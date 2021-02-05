@@ -1,53 +1,109 @@
 
 class Node:
-    def __init__(self, value=None, left=None, right=None):
+    def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
 
 class BinaryTree:
-    def __init__(self, root=None):
-        self.root = root
+    def __init__(self, value):
+        self.root = Node(value)
+        self.count = 1
+
+    def size(self):
+        return self.count
 
     def pre_order(self):
+        result = []
 
-        def traverse(root):
-            print(root.value)
-            if root.left:
-                traverse(root.left)
-            if root.right:
-                traverse(root.right)
-        traverse(self.root)
+        def recursive_traverse(node):
+            # capture root node value
+            print(result.value)
+            # if left child exists, go left
+            if node.left:
+                recursive_traverse(node.left)
+            # if right child exists, go right
+            if node.right:
+                recursive_traverse(node.right)
+
+        recursive_traverse(self.root)
+        return result
 
     def in_order(self):
-        def traverse(root):
-            if root.left:
-                traverse(root.left)
-            print(root.value)
-            if root.right:
-                traverse(root.right)
-        traverse(self.root)
+        result = []
+
+        def recursive_traverse(node):
+            # if left child exists, go left
+            if node.left:
+                recursive_traverse(node.left)
+            # capture root node value
+            print(node.value)
+            # if right child exists, go right
+            if node.right:
+                recursive_traverse(node.right)
+
+        recursive_traverse(self.root)
+        return result
 
     def post_order(self):
-        def traverse(root):
-            if root.left:
-                traverse(root.left)
-            if root.right:
-                traverse(root.right)
-            print(root.value)
-        traverse(self.root)
+        result = []
+
+        def recursive_traverse(node):
+            # if left child exists, go left
+            if node.left:
+                recursive_traverse(node.left)
+            # if left child exists, go right
+            if node.right:
+                recursive_traverse(node.right)
+            # capture root node value
+            print(node.value)
+
+        recursive_traverse(self.root)
+        return result
 
 
-class BST:
-    def __init__(self) -> None:
-        pass
+class BST(BinaryTree):
+    def __init__(self, value):
+        self.root = Node(value)
+        self.count = 1
 
-    def add(self):
-        pass
+    def add(self, value):
+        self.count += 1
+        new_node = Node(value)
 
-    def contains(self):
-        pass
+        def search_tree(node):
+            # if value < node.value, go left
+            if value < node.value:
+                # if no left child, append new node
+                if not node.left:
+                    node.left = new_node
+                else:
+                    # if left child, look left again
+                    search_tree(node.left)
+            # if value is less than node.value, go right
+            elif value > node.value:
+                # if no right child, append new node
+                if not node.right:
+                    node.right = new_node
+                else:
+                    # if right child, look right again
+                    search_tree(node.right)
+
+        search_tree(self.root)
+
+    def contains(self, value):
+        current_node = self.root
+
+        while current_node:
+            if value == current_node.value:
+                return True
+            if value < current_node.value:
+                current_node = current_node.left
+            else:
+                current_node = current_node.right
+        # if we look through entire tree and don't find a value
+        return False
 
 
 if __name__ == "__main__":
