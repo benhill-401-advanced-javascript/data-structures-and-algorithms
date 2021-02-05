@@ -78,6 +78,21 @@ class BinaryTree:
             current_node = current_node.right
         return current_node.value
 
+    def breadth_first(self):
+        result = []
+        queue = []
+        queue.append(self.root)
+
+        while len(queue):
+            current_node = queue[0]
+
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+            result.append(current_node.value)
+        return result
+
 
 class BST(BinaryTree):
     def __init__(self, value):
