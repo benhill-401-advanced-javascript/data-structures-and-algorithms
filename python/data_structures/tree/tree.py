@@ -62,6 +62,22 @@ class BinaryTree:
         recursive_traverse(self.root)
         return result
 
+    def find_min_value(self):
+        current_node = self.root
+
+        # continue traversing left until no more children
+        while current_node.left:
+            current_node = current_node.left
+        return current_node.value
+
+    def find_max_value(self):
+        current_node = self.root
+
+        # continue traversing right until no more children
+        while current_node.right:
+            current_node = current_node.right
+        return current_node.value
+
 
 class BST(BinaryTree):
     def __init__(self, value):
