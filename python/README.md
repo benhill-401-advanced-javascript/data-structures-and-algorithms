@@ -9,10 +9,14 @@
   - [Array Reverse](array_reverse/README.md)
   - [Array Shift](array-shift/README.md)
   - [Array Binary Search](array_binary_search/README.md)
+  - [Multi-Bracket Validation](multi_bracket_validation/README.md)
+
 
 - **Data Structures**
   - [Linked List](data_structures/linked_list/README.md)
   - [LL zip](ll_zip/README.md)
+  - [Animal Shelter Queue](fifo_animal_shelter/README.md)
+  - [Trees]
 
 ### Folder and Challenge Setup
 
