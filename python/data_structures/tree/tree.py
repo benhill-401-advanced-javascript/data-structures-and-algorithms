@@ -138,7 +138,7 @@ class BST(BinaryTree):
 
 
 if __name__ == "__main__":
-    tree = BinaryTree()
+    tree = BST
 
     tree.root = Node("ROOT")
     tree.root.left = Node("LEFT")
