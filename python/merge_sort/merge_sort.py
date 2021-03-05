@@ -11,6 +11,7 @@ def merge_sort(arr):
         merge_sort(left_half, right_half, arr)
 
 
+# try and take merge function out and add same logic to merge_sort..
 def merge(left_half, right_half, arr):
     i = 0
     j = 0
