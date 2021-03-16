@@ -1,5 +1,6 @@
-# from hashtable.linked_list import LinkedList
-from hashtable.LL.linked_list import LinkedList
+from hashtable.linked_list import LinkedList
+
+# from linked_list import LinkedList
 
 
 class HashTable:
@@ -9,7 +10,7 @@ class HashTable:
 
     def value(self, LL, key, value=None):
         """[Adds the key/value to the hash table. If key already exists, update the value. When value is not given, return the value matching the key, or None]"""
-        # LL = LinkedList()
+
         if value:
             current = LL.head
             while current is not None:
@@ -59,11 +60,17 @@ class HashTable:
         index = primed % self.size
         return index
 
+    def get(self, key):
+        hashed_key = self.hash(str(key))
+        if self.table[hashed_key]:
+            return self.value(self.table[hashed_key], str(key))
+        return None
 
-if __name__ == "__main__":
-    h_table = HashTable(5)
 
-    h_table.add("Name", "Leonardo")
-    h_table.add("Ninja", "true")
-    h_table.add("Species", "turtle")
-    print(h_table.get("Name"))
+# if __name__ == "__main__":
+#     h_table = HashTable(5)
+
+#     h_table.add("Name", "Leonardo")
+#     h_table.add("Ninja", "true")
+#     h_table.add("Species", "turtle")
+#     print(h_table.get("Name"))
