@@ -1,4 +1,5 @@
-from data_structures.linked_list.linked_list import LinkedList, Node
+# from hashtable.linked_list import LinkedList
+from hashtable.LL.linked_list import LinkedList
 
 
 class HashTable:
