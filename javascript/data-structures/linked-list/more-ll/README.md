@@ -2,6 +2,7 @@
 
 - [Click here](../../node-class/README.md) to view my Node class. 
 - [Click here](LinkedList.js) for the linked list and [here](index.js) for verification.
+- [Click here](../dbl-ll/README.md) for my Doubly linked list.
 
 
 ## Summary

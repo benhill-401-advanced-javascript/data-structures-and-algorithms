@@ -1,10 +1,20 @@
 const Node = require('../../node-class/node.js');
 
+
+/**
+ * @class Creates a new Linked List class
+ * @lends LL.prototype */
 class LL {
+  /** Initializes LL with head value set to `null`
+   * @constructs */
   constructor(){
     this.head = null;
   }
 
+  /** Creates a new instance of Node class and sets current to head of LL
+   * @param {*} value - Takes any value and adds to head of LL
+   * @var newHead <- Instantiates new Node that takes value, changes to LL's head
+   * @var currentHead <- Stores LL's head */
   addToHead(value){
     const newHead = new Node(value);
     const currentHead = this.head;
