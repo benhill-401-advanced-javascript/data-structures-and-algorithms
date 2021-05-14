@@ -95,7 +95,7 @@ class DoublyLL {
    * @param {value} value
    * @returns {nodeToRemove} nodeToRemove
    */
-  removeByData(value) {
+  removeByValue(value) {
     let nodeToRemove;
     let currentNode = this.head;
     while (currentNode !== null) {
