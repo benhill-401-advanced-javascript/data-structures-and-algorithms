@@ -1,20 +1,43 @@
+
+
+
 class Node {
+
   constructor(value){
     this.value = value;
     this.next = null;
+    this.previous = null;
   }
 
   setNextNode(node){
-    if (!(node instanceof Node)){
+    if (node instanceof Node || node === null){
+      this.next = node;
+    } else {
       throw new Error('Next node must be a member of the Node class');
     }
-    this.next = node;
   }
+
+
+  setPreviousNode(node) {
+    if (node instanceof Node || node === null){
+      this.previous = node;
+    } else {
+      throw new Error('Previous node must be a member of the Node class');
+    }
+  }
+
 
   getNextNode(){
     return this.next;
   }
+
+
+  getPreviousNode() {
+    return this.previous;
+  }
 }
+
+
 
 // const newNode = new Node('I am an instance of a Node!');
 // const secondNode = new Node('I am the next node!');
@@ -22,8 +45,9 @@ class Node {
 
 // newNode.setNextNode(secondNode);
 // secondNode.setNextNode(thirdNode);
-// thirdNode.getNextNode();
+// thirdNode.getPreviousNode(secondNode);
 
 // console.log(newNode);
 
 module.exports = Node;
+
