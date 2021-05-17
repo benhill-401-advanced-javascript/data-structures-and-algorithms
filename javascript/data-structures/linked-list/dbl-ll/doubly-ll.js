@@ -1,27 +1,16 @@
 'use strict';
 
-const Node = require('../../node-class/node');
+const Node = require('../../node-class/node.js');
 
-/** Creates a new DoublyLL instance
- * @module
-*/
 
-/** Doubly linked list class
- * @class
- */
 class DoublyLL {
-  /** Initializes linked list with head and tail values to `null`
-   * @constructor
-   */
+
   constructor(){
     this.head = null;
     this.tail = null;
   }
 
-  /** Adds new nodes to head of linked list
-   * @param {DoublyLL} value
-   * @returns {Node} new head
-   */
+
   addToHead(value) {
     const newHead = new Node(value);
     const currentHead = this.head;
@@ -35,10 +24,7 @@ class DoublyLL {
     }
   }
 
-  /** Adds new nodes to tail of linked list
-   * @param {DoublyLL} value
-   * @returns {Node} new tail
-   */
+
   addToTail(value) {
     const newTail = new Node(value);
     const currentTail = this.tail;
@@ -53,10 +39,7 @@ class DoublyLL {
   }
 
 
-  /** Finds and removes the head node by updating the value of the node to the heads previous node, 
-   * which would be `null`
-   * @returns {removedHead} removedHead.value
-   */
+
   removeHead() {
     const removedHead = this.head;
     if (!removedHead) {
@@ -72,10 +55,7 @@ class DoublyLL {
     return removedHead.value;
   }
 
-  /** Finds and removes the tail node by updating the value of the node to the tails next node, which 
-   * would be `null`
-   * @returns {removedTail} removedTail.value
-   */
+
   removeTail() {
     const removedTail = this.tail;
     if (!removedTail) {
@@ -91,10 +71,7 @@ class DoublyLL {
     return removedTail.value;
   }
 
-  /** Finds and removes any given node by value
-   * @param {value} value
-   * @returns {nodeToRemove} nodeToRemove
-   */
+
   removeByValue(value) {
     let nodeToRemove;
     let currentNode = this.head;
